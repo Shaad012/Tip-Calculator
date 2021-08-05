@@ -10,35 +10,35 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(185, 41%, 84%);
+      position:relative;
+      
+    }
+    .container{
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      transform : translate(-50%,-50%);
+      height: 350px;
+      width: 700px;
+      border-radius: 10px;
+      background-color: white;
+    }
+    #amount{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: hsl(183, 100%, 15%);
+    height: 300px;
+    width: 320px;
+    border-radius: 10px;
+    }
   </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="container">
+      <div id="amount"></div>
+    </div>
 </body>
 </html>
