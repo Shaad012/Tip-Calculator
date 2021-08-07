@@ -2,43 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    body{
-      background-color: hsl(185, 41%, 84%);
-      position:relative;
-      
-    }
-    .container{
-      position: absolute;
-      top: 50vh;
-      left: 50vw;
-      transform : translate(-50%,-50%);
-      height: 350px;
-      width: 700px;
-      border-radius: 10px;
-      background-color: white;
-    }
-    #amount{
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    background-color: hsl(183, 100%, 15%);
-    height: 300px;
-    width: 320px;
-    border-radius: 10px;
-    }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 <body>
-    <div class="container">
-      <div id="amount"></div>
+  <img src="logo.svg" alt="">
+  <div class="container">
+    <div class="left">
+
+      <div class="field-container">
+        <label for="Bill" class="field-label">Bill</label>
+        <div class="input-with-logo">
+          <img src="icon-dollar.svg" alt=""class="input-logo">
+          <input type="text" id="total-amount" class="field-input" placeholder="0">
+        </div>
+      </div>
+
+      <div class="field-container">
+        <label for="Tip" class="field-label">Select Tip%</label>
+        <div class="tip-options">
+          <button class="tip-button">5%</button>
+          <button class="tip-button">10%</button>
+          <button class="tip-button">15%</button>
+          <button class="tip-button">25%</button>
+          <button class="tip-button">50%</button>
+          <input type="text" class="field-input" placeholder="Custom">
+        </div>
+      </div>
+
+      <div class="field-container">
+        <label for="Number of people" class="field-label">Number of People</label>
+        <div class="input-with-logo">
+          <img src="icon-person.svg" alt="" class="input-logo">
+          <input type="text" id="number-of-people" class="field-input" placeholder="0">
+        </div>
+      </div>
+
     </div>
+
+    <div class="right">
+      <div>
+        <div class="space-between">
+          <div class="result-field">
+            <p class="result-title">Tip Amount</p>
+            <p class="result-subtitle">/ person</p>
+          </div>
+          <p class="result-value">$0.00</p>
+        </div>
+  
+        <div class="space-between">
+          <div class="result-field">
+            <p class="result-title">Total</p>
+            <p class="result-subtitle">/ person</p>
+          </div>
+          <p class="result-value">$0.00</p>
+        </div>
+      </div>
+      <button class="reset not-interactable">RESET</button>
+    </div>
+  </div>
 </body>
 </html>
